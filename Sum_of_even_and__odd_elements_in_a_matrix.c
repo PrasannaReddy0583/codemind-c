@@ -1,26 +1,27 @@
 #include<stdio.h>
-
-int main(){
-    int n,m;
-    scanf("%d %d", &n, &m);
-    int arr[n][m];
-    
-    for(int i=0; i<n; i++){
-        for(int j=0; j<m; j++){
-            scanf("%d", &arr[i][j]);
+int main()
+{
+    int a,b,i,j;scanf("%d%d",&a,&b);int ar[a][b];
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<b;j++)
+        {
+            scanf("%d",&ar[i][j]);
         }
     }
-    int esum=0,osum=0;
-    for( int i =0; i<n; i++){
-        for(int j=0; j<m; j++){
-            if(arr[i][j] % 2 == 0){
-                esum += arr[i][j];
-            }else{
-                osum += arr[i][j];
+    int s=0,l=0;
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<b;j++)
+        {
+            if(ar[i][j]%2==0)
+            {
+                s+=ar[i][j];
+            }
+            if(ar[i][j]%2!=0)
+            {
+                l+=ar[i][j];
             }
         }
-    }
-    
-    printf("%d %d", esum, osum);
-    
+    }printf("%d %d",s,l);
 }
